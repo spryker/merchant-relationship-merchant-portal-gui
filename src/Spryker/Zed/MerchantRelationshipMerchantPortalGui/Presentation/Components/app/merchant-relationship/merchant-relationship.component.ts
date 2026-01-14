@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 import { TableConfig } from '@spryker/table';
 
 @Component({
+    standalone: false,
     selector: 'mp-merchant-relationship',
     templateUrl: './merchant-relationship.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush,

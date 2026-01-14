@@ -1,47 +1,56 @@
-import { NO_ERRORS_SCHEMA } from '@angular/core';
-import { TestBed } from '@angular/core/testing';
-import { createComponentWrapper, getTestingForComponent } from '@mp/zed-ui/testing';
+import { Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MerchantRelationshipComponent } from './merchant-relationship.component';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { TableConfig } from '@spryker/table';
 
-describe('MerchantRelationshipComponent', () => {
-    const { testModule, createComponent } = getTestingForComponent(MerchantRelationshipComponent, {
-        ngModule: { schemas: [NO_ERRORS_SCHEMA] },
-        projectContent: `
+@Component({
+    template: `
+        <mp-merchant-relationship [tableConfig]="tableConfig" [tableId]="tableId">
             <span title></span>
             <span button-action></span>
-        `,
-    });
+        </mp-merchant-relationship>
+    `,
+    standalone: false,
+})
+class TestHostComponent {
+    @Input() tableConfig?: TableConfig;
+    @Input() tableId?: string;
+}
 
-    beforeEach(() => {
+describe('MerchantRelationshipComponent', () => {
+    let fixture: ComponentFixture<TestHostComponent>;
+
+    beforeEach(async () => {
         TestBed.configureTestingModule({
-            imports: [testModule],
+            declarations: [MerchantRelationshipComponent, TestHostComponent],
+            schemas: [NO_ERRORS_SCHEMA],
         });
+
+        fixture = TestBed.createComponent(TestHostComponent);
+        await fixture.detectChanges();
     });
 
-    it('should render <mp-merchant-relationship-table> component', async () => {
-        const host = await createComponentWrapper(createComponent);
-        const productListTableComponent = host.queryCss('mp-merchant-relationship-table');
+    it('should render <mp-merchant-relationship-table> component', () => {
+        const productListTableComponent = fixture.debugElement.query(By.css('mp-merchant-relationship-table'));
 
         expect(productListTableComponent).toBeTruthy();
     });
 
-    it('should render <spy-headline> component', async () => {
-        const host = await createComponentWrapper(createComponent);
-        const headlineComponent = host.queryCss('spy-headline');
+    it('should render <spy-headline> component', () => {
+        const headlineComponent = fixture.debugElement.query(By.css('spy-headline'));
 
         expect(headlineComponent).toBeTruthy();
     });
 
-    it('should render `title` slot to the <spy-headline> component', async () => {
-        const host = await createComponentWrapper(createComponent);
-        const titleSlot = host.queryCss('spy-headline [title]');
+    it('should render `title` slot to the <spy-headline> component', () => {
+        const titleSlot = fixture.debugElement.query(By.css('spy-headline [title]'));
 
         expect(titleSlot).toBeTruthy();
     });
 
-    it('should render `button-action` slot to the <spy-headline> component', async () => {
-        const host = await createComponentWrapper(createComponent);
-        const buttonActionSlot = host.queryCss('spy-headline [button-action]');
+    it('should render `button-action` slot to the <spy-headline> component', () => {
+        const buttonActionSlot = fixture.debugElement.query(By.css('spy-headline [button-action]'));
 
         expect(buttonActionSlot).toBeTruthy();
     });
@@ -52,16 +61,18 @@ describe('MerchantRelationshipComponent', () => {
             data: 'data',
             columns: 'columns',
         };
-        const host = await createComponentWrapper(createComponent, { tableConfig: mockTableConfig });
-        const productListTableComponent = host.queryCss('mp-merchant-relationship-table');
+        fixture.componentRef.setInput('tableConfig', mockTableConfig);
+        await fixture.detectChanges();
+        const productListTableComponent = fixture.debugElement.query(By.css('mp-merchant-relationship-table'));
 
         expect(productListTableComponent.properties.config).toEqual(mockTableConfig);
     });
 
     it('should bound `@Input(tableId)` to the `tableId` input of <mp-merchant-relationship-table> component', async () => {
         const mockTableId = 'mockTableId';
-        const host = await createComponentWrapper(createComponent, { tableId: mockTableId });
-        const productListTableComponent = host.queryCss('mp-merchant-relationship-table');
+        fixture.componentRef.setInput('tableId', mockTableId);
+        await fixture.detectChanges();
+        const productListTableComponent = fixture.debugElement.query(By.css('mp-merchant-relationship-table'));
 
         expect(productListTableComponent.properties.tableId).toEqual(mockTableId);
     });

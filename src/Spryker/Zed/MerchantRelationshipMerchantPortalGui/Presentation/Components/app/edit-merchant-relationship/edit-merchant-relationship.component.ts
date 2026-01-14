@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
+    standalone: false,
     selector: 'mp-edit-merchant-relationship',
     templateUrl: './edit-merchant-relationship.component.html',
     styleUrls: ['./edit-merchant-relationship.component.less'],
