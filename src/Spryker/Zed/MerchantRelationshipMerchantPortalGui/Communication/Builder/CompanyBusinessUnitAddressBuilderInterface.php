@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\CompanyUnitAddressTransfer;
 
 interface CompanyBusinessUnitAddressBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return string
-     */
     public function buildCompanyBusinessUnitAddress(CompanyUnitAddressTransfer $companyUnitAddressTransfer): string;
 }

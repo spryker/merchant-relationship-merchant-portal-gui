@@ -66,11 +66,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
      */
     public const PLUGINS_MERCHANT_RELATIONSHIP_MERCHANT_DASHBOARD_CARD_EXPANDER = 'PLUGINS_MERCHANT_RELATIONSHIP_MERCHANT_DASHBOARD_CARD_EXPANDER';
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     public function provideCommunicationLayerDependencies(Container $container): Container
     {
         $container = parent::provideBusinessLayerDependencies($container);
@@ -86,11 +81,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantRelationshipFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_RELATIONSHIP, function (Container $container) {
@@ -102,11 +92,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantUserFacade(Container $container): Container
     {
         $container->set(static::FACADE_MERCHANT_USER, function (Container $container) {
@@ -118,11 +103,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTranslatorFacade(Container $container): Container
     {
         $container->set(static::FACADE_TRANSLATOR, function (Container $container) {
@@ -134,11 +114,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addGuiTableHttpDataRequestExecutor(Container $container): Container
     {
         $container->set(static::SERVICE_GUI_TABLE_HTTP_DATA_REQUEST_EXECUTOR, function (Container $container) {
@@ -148,11 +123,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addGuiTableFactory(Container $container): Container
     {
         $container->set(static::SERVICE_GUI_TABLE_FACTORY, function (Container $container) {
@@ -162,11 +132,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addZedUiFactory(Container $container): Container
     {
         $container->set(static::SERVICE_ZED_UI_FACTORY, function (Container $container) {
@@ -176,11 +141,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addTwigEnvironment(Container $container): Container
     {
         $container->set(static::SERVICE_TWIG, function (Container $container) {
@@ -190,11 +150,6 @@ class MerchantRelationshipMerchantPortalGuiDependencyProvider extends AbstractBu
         return $container;
     }
 
-    /**
-     * @param \Spryker\Zed\Kernel\Container $container
-     *
-     * @return \Spryker\Zed\Kernel\Container
-     */
     protected function addMerchantRelationshipMerchantDashboardCardExpanderPlugins(Container $container): Container
     {
         $container->set(static::PLUGINS_MERCHANT_RELATIONSHIP_MERCHANT_DASHBOARD_CARD_EXPANDER, function () {

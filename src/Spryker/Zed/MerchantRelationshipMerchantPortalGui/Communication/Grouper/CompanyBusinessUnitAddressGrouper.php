@@ -18,9 +18,6 @@ class CompanyBusinessUnitAddressGrouper implements CompanyBusinessUnitAddressGro
      */
     protected CompanyBusinessUnitAddressBuilderInterface $companyBusinessUnitAddressBuilder;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Builder\CompanyBusinessUnitAddressBuilderInterface $companyBusinessUnitAddressBuilder
-     */
     public function __construct(CompanyBusinessUnitAddressBuilderInterface $companyBusinessUnitAddressBuilder)
     {
         $this->companyBusinessUnitAddressBuilder = $companyBusinessUnitAddressBuilder;

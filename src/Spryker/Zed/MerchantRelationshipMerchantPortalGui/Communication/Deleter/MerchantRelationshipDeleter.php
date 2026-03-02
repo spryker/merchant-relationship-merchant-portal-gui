@@ -18,19 +18,11 @@ class MerchantRelationshipDeleter implements MerchantRelationshipDeleterInterfac
      */
     protected MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     */
     public function __construct(MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade)
     {
         $this->merchantRelationshipFacade = $merchantRelationshipFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return void
-     */
     public function deleteMerchantRelationship(MerchantRelationshipTransfer $merchantRelationshipTransfer): void
     {
         $merchantRelationshipRequestTransfer = (new MerchantRelationshipRequestTransfer())

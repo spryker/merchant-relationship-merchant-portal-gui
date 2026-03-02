@@ -67,12 +67,6 @@ class UpdateMerchantRelationshipController extends AbstractController
         return $this->handleMerchantRelationshipFormSubmit($merchantRelationshipForm, $merchantRelationshipTransfer);
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationshipForm
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     protected function handleMerchantRelationshipFormSubmit(
         FormInterface $merchantRelationshipForm,
         MerchantRelationshipTransfer $merchantRelationshipTransfer
@@ -99,13 +93,6 @@ class UpdateMerchantRelationshipController extends AbstractController
         );
     }
 
-    /**
-     * @param \Symfony\Component\Form\FormInterface $merchantRelationshipForm
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationshipResponseTransfer $merchantRelationshipResponseTransfer
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     protected function handleUpdateMerchantRelationshipResponse(
         FormInterface $merchantRelationshipForm,
         MerchantRelationshipTransfer $merchantRelationshipTransfer,

@@ -15,9 +15,6 @@ use Spryker\Zed\Kernel\Communication\Form\AbstractType;
  */
 class MerchantRelationshipDeleteForm extends AbstractType
 {
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'merchantRelationshipDelete';

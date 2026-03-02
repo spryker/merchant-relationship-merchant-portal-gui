@@ -132,11 +132,6 @@ class MerchantRelationshipGuiTableConfigurationProvider implements MerchantRelat
      */
     protected GuiTableFactoryInterface $guiTableFactory;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\Reader\MerchantRelationshipReaderInterface $merchantRelationshipRequestReader
-     * @param \Spryker\Shared\GuiTable\GuiTableFactoryInterface $guiTableFactory
-     */
     public function __construct(
         MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig,
         MerchantRelationshipReaderInterface $merchantRelationshipRequestReader,
@@ -147,9 +142,6 @@ class MerchantRelationshipGuiTableConfigurationProvider implements MerchantRelat
         $this->guiTableFactory = $guiTableFactory;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function getConfiguration(): GuiTableConfigurationTransfer
     {
         $guiTableConfigurationBuilder = $this->guiTableFactory->createConfigurationBuilder();
@@ -166,11 +158,6 @@ class MerchantRelationshipGuiTableConfigurationProvider implements MerchantRelat
         return $guiTableConfigurationBuilder->createConfiguration();
     }
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
-     *
-     * @return \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface
-     */
     protected function addColumns(GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder): GuiTableConfigurationBuilderInterface
     {
         $guiTableConfigurationBuilder->addColumnText(static::COL_KEY_ID, static::COL_TITLE_ID, true, true)
@@ -194,11 +181,6 @@ class MerchantRelationshipGuiTableConfigurationProvider implements MerchantRelat
         return $guiTableConfigurationBuilder;
     }
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
-     *
-     * @return \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface
-     */
     protected function addFilters(
         GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
     ): GuiTableConfigurationBuilderInterface {
@@ -217,11 +199,6 @@ class MerchantRelationshipGuiTableConfigurationProvider implements MerchantRelat
         return $guiTableConfigurationBuilder;
     }
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
-     *
-     * @return \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface
-     */
     protected function addRowActions(GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder): GuiTableConfigurationBuilderInterface
     {
         $guiTableConfigurationBuilder

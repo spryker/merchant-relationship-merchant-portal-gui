@@ -11,11 +11,6 @@ use Generated\Shared\Transfer\CompanyUnitAddressTransfer;
 
 class CompanyBusinessUnitAddressBuilder implements CompanyBusinessUnitAddressBuilderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\CompanyUnitAddressTransfer $companyUnitAddressTransfer
-     *
-     * @return string
-     */
     public function buildCompanyBusinessUnitAddress(CompanyUnitAddressTransfer $companyUnitAddressTransfer): string
     {
         $companyBusinessUnitAddress = sprintf(

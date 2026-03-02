@@ -33,11 +33,6 @@ class MerchantRelationshipReader implements MerchantRelationshipReaderInterface
      */
     protected MerchantRelationshipMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade
-     */
     public function __construct(
         MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig,
         MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade,
@@ -48,11 +43,6 @@ class MerchantRelationshipReader implements MerchantRelationshipReaderInterface
         $this->merchantUserFacade = $merchantUserFacade;
     }
 
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer|null
-     */
     public function findMerchantRelationshipById(int $idMerchantRelationship): ?MerchantRelationshipTransfer
     {
         $merchantRelationshipCriteriaTransfer = $this->createMerchantRelationshipCriteriaTransfer();
@@ -66,9 +56,6 @@ class MerchantRelationshipReader implements MerchantRelationshipReaderInterface
         return $merchantRelationshipCollectionTransfer->getMerchantRelationships()->getIterator()->current();
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer
-     */
     public function getMerchantRelationshipCollection(): MerchantRelationshipCollectionTransfer
     {
         $merchantRelationshipCriteriaTransfer = $this->createMerchantRelationshipCriteriaTransfer();
@@ -137,9 +124,6 @@ class MerchantRelationshipReader implements MerchantRelationshipReaderInterface
         return $companyFilterOptions;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     protected function createMerchantRelationshipCriteriaTransfer(): MerchantRelationshipCriteriaTransfer
     {
         $merchantUserTransfer = $this->merchantUserFacade->getCurrentMerchantUser();

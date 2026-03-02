@@ -12,16 +12,8 @@ use Generated\Shared\Transfer\MerchantRelationshipTransfer;
 
 interface MerchantRelationshipReaderInterface
 {
-    /**
-     * @param int $idMerchantRelationship
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipTransfer|null
-     */
     public function findMerchantRelationshipById(int $idMerchantRelationship): ?MerchantRelationshipTransfer;
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer
-     */
     public function getMerchantRelationshipCollection(): MerchantRelationshipCollectionTransfer;
 
     /**

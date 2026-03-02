@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer;
 
 interface MerchantRelationshipDashboardGuiTableConfigurationProviderInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function getConfiguration(
         MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
     ): GuiTableConfigurationTransfer;

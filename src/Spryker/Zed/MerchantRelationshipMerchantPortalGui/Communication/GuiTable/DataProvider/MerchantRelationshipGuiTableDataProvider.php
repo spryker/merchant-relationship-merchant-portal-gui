@@ -47,11 +47,6 @@ class MerchantRelationshipGuiTableDataProvider extends AbstractGuiTableDataProvi
      */
     protected MerchantRelationshipMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\GuiTable\Mapper\MerchantRelationshipGuiTableMapperInterface $merchantRelationshipGuiTableMapper
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantUserFacadeInterface $merchantUserFacade
-     */
     public function __construct(
         MerchantRelationshipGuiTableMapperInterface $merchantRelationshipGuiTableMapper,
         MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade,
@@ -62,11 +57,6 @@ class MerchantRelationshipGuiTableDataProvider extends AbstractGuiTableDataProvi
         $this->merchantUserFacade = $merchantUserFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\GuiTableDataRequestTransfer $guiTableDataRequestTransfer
-     *
-     * @return \Spryker\Shared\Kernel\Transfer\AbstractTransfer
-     */
     protected function createCriteria(GuiTableDataRequestTransfer $guiTableDataRequestTransfer): AbstractTransfer
     {
         return new MerchantRelationshipTableCriteriaTransfer();
@@ -96,11 +86,6 @@ class MerchantRelationshipGuiTableDataProvider extends AbstractGuiTableDataProvi
         return $guiTableDataResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableRowDataResponseTransfer
-     */
     protected function getRowData(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): GuiTableRowDataResponseTransfer {
@@ -117,11 +102,6 @@ class MerchantRelationshipGuiTableDataProvider extends AbstractGuiTableDataProvi
         return (new GuiTableRowDataResponseTransfer())->setResponseData($rowData);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     protected function createMerchantRelationshipCriteriaTransfer(
         MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer
     ): MerchantRelationshipCriteriaTransfer {
@@ -167,11 +147,6 @@ class MerchantRelationshipGuiTableDataProvider extends AbstractGuiTableDataProvi
         return $companyBusinessUnitNames;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     protected function addDefaultSorting(
         MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
     ): MerchantRelationshipCriteriaTransfer {

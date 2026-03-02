@@ -11,10 +11,5 @@ use Generated\Shared\Transfer\MerchantRelationshipTransfer;
 
 interface MerchantRelationshipDeleterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return void
-     */
     public function deleteMerchantRelationship(MerchantRelationshipTransfer $merchantRelationshipTransfer): void;
 }

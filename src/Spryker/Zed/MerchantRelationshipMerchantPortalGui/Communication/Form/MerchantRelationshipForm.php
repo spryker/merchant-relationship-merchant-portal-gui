@@ -30,19 +30,11 @@ class MerchantRelationshipForm extends AbstractType
      */
     public const FIELD_SAVE = 'save';
 
-    /**
-     * @return string
-     */
     public function getBlockPrefix(): string
     {
         return 'merchantRelationship';
     }
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([

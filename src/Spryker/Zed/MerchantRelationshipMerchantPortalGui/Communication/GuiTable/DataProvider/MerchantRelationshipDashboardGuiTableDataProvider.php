@@ -19,9 +19,6 @@ class MerchantRelationshipDashboardGuiTableDataProvider implements MerchantRelat
      */
     protected MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig
-     */
     public function __construct(MerchantRelationshipMerchantPortalGuiConfig $merchantRelationshipMerchantPortalGuiConfig)
     {
         $this->merchantRelationshipMerchantPortalGuiConfig = $merchantRelationshipMerchantPortalGuiConfig;

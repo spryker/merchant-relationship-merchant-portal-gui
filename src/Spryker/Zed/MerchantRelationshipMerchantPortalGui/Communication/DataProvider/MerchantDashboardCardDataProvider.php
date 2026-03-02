@@ -61,9 +61,6 @@ class MerchantDashboardCardDataProvider implements MerchantDashboardCardDataProv
         $this->merchantRelationshipMerchantDashboardCardExpanderPlugins = $merchantRelationshipMerchantDashboardCardExpanderPlugins;
     }
 
-    /**
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     public function getMerchantRelationDashboardCard(): MerchantDashboardCardTransfer
     {
         $merchantRelationshipCollectionTransfer = $this->merchantRelationshipReader->getMerchantRelationshipCollection();
@@ -94,11 +91,6 @@ class MerchantDashboardCardDataProvider implements MerchantDashboardCardDataProv
         return $this->executeMerchantRelationshipMerchantDashboardCardExpanderPlugins($merchantDashboardCardTransfer);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantDashboardCardTransfer $merchantDashboardCardTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantDashboardCardTransfer
-     */
     protected function executeMerchantRelationshipMerchantDashboardCardExpanderPlugins(
         MerchantDashboardCardTransfer $merchantDashboardCardTransfer
     ): MerchantDashboardCardTransfer {

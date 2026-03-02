@@ -12,11 +12,6 @@ use Generated\Shared\Transfer\MerchantRelationshipTransfer;
 
 interface MerchantRelationshipUpdaterInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipResponseTransfer
-     */
     public function updateMerchantRelationship(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): MerchantRelationshipResponseTransfer;

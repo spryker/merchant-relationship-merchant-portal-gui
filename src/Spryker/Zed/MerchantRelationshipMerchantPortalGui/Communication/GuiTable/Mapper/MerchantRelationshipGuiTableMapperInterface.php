@@ -14,23 +14,11 @@ use Generated\Shared\Transfer\MerchantRelationshipTableCriteriaTransfer;
 
 interface MerchantRelationshipGuiTableMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     public function mapMerchantRelationshipTableCriteriaTransferToMerchantRelationshipCriteriaTransfer(
         MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer,
         MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
     ): MerchantRelationshipCriteriaTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataResponseTransfer $guiTableDataResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function mapMerchantRelationshipCollectionTransferToGuiTableDataResponseTransfer(
         MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer,
         GuiTableDataResponseTransfer $guiTableDataResponseTransfer

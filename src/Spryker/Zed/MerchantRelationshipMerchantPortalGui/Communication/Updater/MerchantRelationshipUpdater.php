@@ -19,19 +19,11 @@ class MerchantRelationshipUpdater implements MerchantRelationshipUpdaterInterfac
      */
     protected MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade;
 
-    /**
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade
-     */
     public function __construct(MerchantRelationshipMerchantPortalGuiToMerchantRelationshipFacadeInterface $merchantRelationshipFacade)
     {
         $this->merchantRelationshipFacade = $merchantRelationshipFacade;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTransfer $merchantRelationshipTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipResponseTransfer
-     */
     public function updateMerchantRelationship(
         MerchantRelationshipTransfer $merchantRelationshipTransfer
     ): MerchantRelationshipResponseTransfer {

@@ -71,10 +71,6 @@ class MerchantRelationshipDashboardGuiTableConfigurationProvider implements Merc
      */
     protected MerchantRelationshipDashboardGuiTableDataProviderInterface $merchantRelationshipDashboardGuiTableDataProvider;
 
-    /**
-     * @param \Spryker\Shared\GuiTable\GuiTableFactoryInterface $guiTableFactory
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Communication\GuiTable\DataProvider\MerchantRelationshipDashboardGuiTableDataProviderInterface $merchantRelationshipDashboardGuiTableDataProvider
-     */
     public function __construct(
         GuiTableFactoryInterface $guiTableFactory,
         MerchantRelationshipDashboardGuiTableDataProviderInterface $merchantRelationshipDashboardGuiTableDataProvider
@@ -83,11 +79,6 @@ class MerchantRelationshipDashboardGuiTableConfigurationProvider implements Merc
         $this->merchantRelationshipDashboardGuiTableDataProvider = $merchantRelationshipDashboardGuiTableDataProvider;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableConfigurationTransfer
-     */
     public function getConfiguration(MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer): GuiTableConfigurationTransfer
     {
         $guiTableConfigurationBuilder = $this->guiTableFactory->createConfigurationBuilder();
@@ -108,11 +99,6 @@ class MerchantRelationshipDashboardGuiTableConfigurationProvider implements Merc
         return $guiTableConfigurationTransfer;
     }
 
-    /**
-     * @param \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
-     *
-     * @return \Spryker\Shared\GuiTable\Configuration\Builder\GuiTableConfigurationBuilderInterface
-     */
     protected function addColumns(
         GuiTableConfigurationBuilderInterface $guiTableConfigurationBuilder
     ): GuiTableConfigurationBuilderInterface {

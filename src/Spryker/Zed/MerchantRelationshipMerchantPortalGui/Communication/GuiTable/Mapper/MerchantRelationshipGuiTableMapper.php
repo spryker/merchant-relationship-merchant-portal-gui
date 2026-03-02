@@ -63,12 +63,6 @@ class MerchantRelationshipGuiTableMapper implements MerchantRelationshipGuiTable
         MerchantRelationshipGuiTableConfigurationProvider::COL_KEY_BUSINESS_UNIT_OWNER => self::COL_COMPANY_BUSINESS_UNIT_NAME,
     ];
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipCriteriaTransfer
-     */
     public function mapMerchantRelationshipTableCriteriaTransferToMerchantRelationshipCriteriaTransfer(
         MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer,
         MerchantRelationshipCriteriaTransfer $merchantRelationshipCriteriaTransfer
@@ -105,12 +99,6 @@ class MerchantRelationshipGuiTableMapper implements MerchantRelationshipGuiTable
         return $merchantRelationshipCriteriaTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer
-     * @param \Generated\Shared\Transfer\GuiTableDataResponseTransfer $guiTableDataResponseTransfer
-     *
-     * @return \Generated\Shared\Transfer\GuiTableDataResponseTransfer
-     */
     public function mapMerchantRelationshipCollectionTransferToGuiTableDataResponseTransfer(
         MerchantRelationshipCollectionTransfer $merchantRelationshipCollectionTransfer,
         GuiTableDataResponseTransfer $guiTableDataResponseTransfer
@@ -124,12 +112,6 @@ class MerchantRelationshipGuiTableMapper implements MerchantRelationshipGuiTable
         return $guiTableDataResponseTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer
-     * @param \Generated\Shared\Transfer\MerchantRelationshipConditionsTransfer $merchantRelationshipConditionsTransfer
-     *
-     * @return \Generated\Shared\Transfer\MerchantRelationshipConditionsTransfer
-     */
     protected function mapMerchantRelationshipTableCriteriaTransferToMerchantRelationshipConditionsTransfer(
         MerchantRelationshipTableCriteriaTransfer $merchantRelationshipTableCriteriaTransfer,
         MerchantRelationshipConditionsTransfer $merchantRelationshipConditionsTransfer

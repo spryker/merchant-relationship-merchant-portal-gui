@@ -23,10 +23,6 @@ class MerchantRelationshipResponseBuilder implements MerchantRelationshipRespons
      */
     protected MerchantRelationshipMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade;
 
-    /**
-     * @param \Spryker\Shared\ZedUi\ZedUiFactoryInterface $zedUiFactory
-     * @param \Spryker\Zed\MerchantRelationshipMerchantPortalGui\Dependency\Facade\MerchantRelationshipMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade
-     */
     public function __construct(
         ZedUiFactoryInterface $zedUiFactory,
         MerchantRelationshipMerchantPortalGuiToTranslatorFacadeInterface $translatorFacade
